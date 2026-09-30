@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
-void max(struct std rec[],int n);
+void max(struct std rec[],int n);   //Initiating Functions
 void avg(struct std rec[],int n);
 int search(struct std rec[],int n);
 
 struct std{
     char name[50];
-    int roll;
+    int roll;                           //Creating a struture to hold data of a student
     int age;
     float marks;
 };
@@ -22,7 +22,7 @@ int main(){
     for(int i=0;i<n;i++){
         printf("---Enter %d student details---\n",i+1);
         printf("Name : ");
-        getchar();
+        getchar();                                              //Getting Students Data
         scanf("%s",rec[i].name);
         printf("Roll no. : ");
         scanf("%d",&rec[i].roll);
@@ -50,7 +50,7 @@ while(ch != 4){
 
     case 2:
         avg(rec,n);
-        break;
+        break;                              //options for diffrent operations on data
 
     case 3:
         search(rec,n);
@@ -68,8 +68,7 @@ while(ch != 4){
 }printf("-----Program Exit!!-----");
 return 0;
 }
-
-void max(struct std rec[],int n){
+void max(struct std rec[],int n){                   //defining our functions to perform diffrent actions     
     int max =0;
     for(int i =0;i<n;i++){
         if(rec[i].marks>=max){
