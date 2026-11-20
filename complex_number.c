@@ -20,7 +20,7 @@ struct complex* addComplex(struct complex* z1, struct complex* z2 ,struct comple
 struct complex* multiplyComplex(struct complex* z1, struct complex* z2 , struct complex* result_mul){
                                                                    //Function for multiply two complex numbers
     *((*result_mul).real) = (*((*z1).real)) * (*((*z2).real)) - (*((*z1).imag)) * (*((*z2).imag));
-    *((*result_mul).real) = (*((*z1).real)) * (*((*z2).imag)) + (*((*z1).imag)) * (*((*z2).real));
+    *((*result_mul).imag) = (*((*z1).real)) * (*((*z2).imag)) + (*((*z1).imag)) * (*((*z2).real));
 
     return result_mul;
 }
